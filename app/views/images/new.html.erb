@@ -1,0 +1,13 @@
+<h1>New Image</h1>
+
+<% 3.times { @image.thumbnails.build } %>
+
+<%= form_for @image, :html => {:multipart => true} do |f| %>
+  <%= f.file_field :image %><br />
+  <h3>Thumbnails</h3>
+  <%= f.fields_for :thumbnails do |t| %>
+    <%= t.text_field :name, :size => 10 %>:
+    <%= t.text_field :width, :size => 3 %>x<%= t.text_field :height, :size => 3 %><br />
+  <% end %>
+  <%= f.submit 'Upload' %>
+<% end %>

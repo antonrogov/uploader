@@ -1,0 +1,3 @@
+= Uploader
+
+Simple app which processes and stores carrierwave uploads using delayed job with run-time versions.

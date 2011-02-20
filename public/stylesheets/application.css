@@ -1,0 +1,14 @@
+.clear {
+  clear: both;
+}
+.image {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  float: left;
+}
+  .image img {
+    border: 1px solid #ccc;
+  }

@@ -1,0 +1,13 @@
+<h1>Image</h1>
+
+<p><%= link_to 'View all', root_path %></p>
+
+<% @image.image.versions.each do |name, version| %>
+<h3><%= name %></h3>
+<%= image_tag version.url unless version.blank? %>
+<% end %>
+
+<h3>original</h3>
+<%= image_tag @image.image_url if @image.image? %>
+
+<p><%= link_to 'Delete', @image, :method => :delete, :confirm => 'Are you sure?' %></p>

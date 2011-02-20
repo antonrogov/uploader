@@ -1,0 +1,16 @@
+<h1>Images</h1>
+
+<p><%= link_to 'Add new', new_image_url %></p>
+
+<div>
+  <% for image in @images %>
+  <div class="image">
+    <% if image.image? %>
+      <%= link_to image_tag(image.image_url(:thumb)), image %>
+    <% else %>
+      <%= link_to 'view', image %>
+    <% end %>
+  </div>
+  <% end %>
+  <div class="clear"></div>
+</div>
